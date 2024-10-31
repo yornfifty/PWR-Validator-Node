@@ -11,8 +11,8 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Download the validator.jar and config.json
-RUN wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar && \
-    wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
+RUN wget https://github.com/pwrlabs/PWR-Validator/releases/download/13.0.0/validator.jar && \
+    wget https://github.com/pwrlabs/PWR-Validator/raw/refs/heads/main/config.json
 
 # Copy the password file into the container
 COPY password /app/password
